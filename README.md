@@ -1,4 +1,4 @@
-f# Apigee Push Notifications Sample for Android and iOS
+# Apigee Push Notifications Sample for Android and iOS
 
 ---
 
@@ -54,28 +54,29 @@ This sample shows how to use Push Notifications in your app using Apigee Appserv
 Setup is done, 
 
 Add 
-	PushNotification.js, [https://github.com/phonegap-build/PushPlugin/tree/master/www] 
-	apigee.min.js [https://github.com/apigee/apigee-javascript-sdk/tree/master/bin]
-
+		
+		PushNotification.js, [https://github.com/phonegap-build/PushPlugin/tree/master/www] 
+		apigee.min.js [https://github.com/apigee/apigee-javascript-sdk/tree/master/bin]
+			
 to 	
-	hello/www/js/
+		
+		hello/www/js/
 
 Edit hello/www/index.html to include the new scripts
 
 		<script type="text/javascript" src="js/PushNotification.js"></script>
         <script type="text/javascript" src="js/apigee.min.js"></script>
 
-For Android,
+For Android,/hello/platforms/android/assests/www/js/index.js - updated for Pushnotification
 
-/hello/platforms/android/assests/www/js/index.js - updated for Pushnotification
-
-		var options = {
-		        orgName:'<org>', // Your Apigee.com username for App Services
-		        appName:'<app>', // Your Apigee App Services app name
-		        buildCurl:true,
-		        logging:true
-		    }
-		var client = new Apigee.Client(options);
+			
+			var options = {
+				        orgName:'<org>', // Your Apigee.com username for App Services
+				        appName:'<app>', // Your Apigee App Services app name
+				        buildCurl:true,
+				        logging:true
+				    }
+			var client = new Apigee.Client(options);
 
 
 	    onDeviceReady: function() {
@@ -105,8 +106,8 @@ For Android,
 			}
 		}
 
-For iOS,
-/hello/platforms/ios/www/js/index.js		
+For iOS, /hello/platforms/ios/www/js/index.js		
+		
 		var options = {
 		        orgName:'<org>', // Your Apigee.com username for App Services
 		        appName:'<app>', // Your Apigee App Services app name
